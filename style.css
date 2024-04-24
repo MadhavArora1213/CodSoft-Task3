@@ -1,0 +1,1615 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "averta cy w10";
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* LOADER */
+
+.loader {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    color: transparent;
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader h1 {
+    font-size: 90px;
+    font-weight: 800;
+}
+
+.glitch {
+    position: relative;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    letter-spacing: 5px;
+    z-index: 999;
+    animation: shift 1s ease-in-out infinite alternate;
+}
+
+.glitch:before,
+.glitch:after {
+    display: block;
+    content: attr(data-glitch);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+
+}
+
+.glitch:before {
+    animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    color: #8b00ff;
+    z-index: -1;
+}
+
+.glitch:after {
+    animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+    color: #00e571;
+    z-index: -2;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-3px, 3px);
+    }
+
+    40% {
+        transform: translate(-3px, -3px);
+    }
+
+    60% {
+        transform: translate(3px, 3px);
+    }
+
+    80% {
+        transform: translate(3px, -3px);
+    }
+
+    to {
+        transform: translate(0);
+    }
+}
+
+@keyframes shift {
+
+    0%,
+    40%,
+    44%,
+    58%,
+    61%,
+    65%,
+    69%,
+    73%,
+    100% {
+        transform: skewX(0deg);
+    }
+
+    41% {
+        transform: skewX(10deg);
+    }
+
+    42% {
+        transform: skewX(-10deg);
+    }
+
+    59% {
+        transform: skewX(40deg) skewY(10deg);
+    }
+
+    60% {
+        transform: skewX(-40deg) skewY(-10deg);
+    }
+
+    63% {
+        transform: skewX(10deg) skewY(-5deg);
+    }
+
+    70% {
+        transform: skewX(-50deg) skewY(-20deg);
+    }
+
+    71% {
+        transform: skewX(10deg) skewY(-10deg);
+    }
+}
+
+/* NavBar */
+
+nav {
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    padding: 1vw 1vw;
+    height: 40px;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 40px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 2vw;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #0ef;
+}
+
+
+.lists {
+    font-size: 1.1vw;
+    font-weight: 700;
+}
+
+nav a:hover {
+    border-radius: 100px;
+}
+
+nav li:first-child {
+    margin-right: auto;
+    font-size: 3vw;
+    font-weight: 600;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 90%;
+    font-size: 6vw;
+    height: 10%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+    background-color: pink;
+    border-radius: 50%;
+}
+
+/* HOME SECTION */
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.left {
+    width: 60%;
+    padding: 10vw 10vw 0vw 10vw;
+}
+
+.about {
+    width: 80%;
+    line-height: 1.3;
+}
+
+.about h2 {
+    font-size: 2vw;
+    font-weight: 400;
+    letter-spacing: -1.5px;
+}
+
+.about h1 {
+    font-size: 4vw;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+}
+
+.text {
+    color: #7b9897;
+    font-weight: 800;
+}
+
+.about p {
+    margin-top: 1vw;
+    font-size: 1.4vw;
+    letter-spacing: -1px;
+}
+
+.images {
+    width: 70%;
+    display: flex;
+    gap: 2vw;
+    cursor: pointer;
+    margin-top: 1vw;
+}
+
+.images img:hover {
+    box-shadow: 4px 5px 2px #dadada;
+}
+
+.github {
+    width: 3vw;
+    height: 3vw;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.whatsapp {
+    width: 3vw;
+    height: 3vw;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.insta {
+    width: 3vw;
+    height: 3vw;
+    background-color: white;
+    border-radius: 50%;
+
+}
+
+.linkedin {
+    width: 3vw;
+    height: 3vw;
+    background-color: white;
+    border-radius: 999px;
+}
+
+.btn button {
+    font-size: 1.5vw;
+    font-weight: 600;
+    padding: 1vw 2vw;
+    border-radius: 20px;
+    border: transparent;
+    background-color: rgb(171, 240, 240);
+    box-shadow: 6px 6px 2px #dadada;
+    margin-top: 1vw;
+
+}
+
+.right {
+    width: 40%;
+    height: inherit;
+
+}
+
+.image {
+    margin-top: 5vw;
+}
+
+.image img {
+    width: 60%;
+    border-radius: 56% 44% 37% 63% / 66% 34% 66% 34%;
+}
+
+/* ABOUT ME SECTION */
+
+.AboutMe {
+    margin-top: 6vw;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.content {
+    display: flex;
+    height: 73vh;
+}
+
+.AboutMe h1 {
+    text-align: center;
+    color: #173b6c;
+    font-size: 4vw;
+    font-weight: 800;
+    text-decoration: underline rgb(186, 255, 255);
+}
+
+.AboutMe p {
+    padding: 2vw 7vw 2vw 5vw;
+    font-size: 1.5vw;
+    font-style: italic;
+}
+
+.Aleft {
+    width: 20%;
+    padding: 1vw 0vw 0vw 6vw;
+}
+
+.Aleft img {
+    width: 90%;
+    height: 60%;
+    border: 2px solid white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 9px #656565, -5px -5px 20px #ffffff;
+}
+
+.Aright {
+    width: 80%;
+    height: 100%;
+}
+
+.Aright h2 {
+    font-size: 2.5vw;
+    font-weight: 600;
+    color: #173b6c;
+}
+
+.Aright p {
+    padding: 1vw 7vw 1vw 1vw;
+}
+
+.Aright ul {
+    padding: 1vw 1vw;
+}
+
+.Aright li {
+    list-style: none;
+    font-weight: 700;
+    margin-top: 0.5vw;
+    font-style: italic;
+
+}
+
+.Aright li::before {
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+    height: 10px;
+    width: 10px;
+    background-image: url("https://media.geeksforgeeks.org/wp-content/uploads/20220607182945/geeksforgeeks.jpg");
+}
+
+.Aright li span {
+    font-weight: 400;
+}
+
+/* SKILLS SECTION */
+
+.Skill {
+    margin-top: 2vw;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f8fd;
+}
+
+.Skill h1 {
+    text-align: center;
+    color: #173b6c;
+    font-size: 4vw;
+    font-weight: 800;
+    text-decoration: underline rgb(186, 255, 255);
+}
+
+.Skill p {
+    font-size: 1.5vw;
+    font-weight: 500;
+    font-style: italic;
+    padding: 3vw 5vw;
+}
+
+.boxes {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5vw;
+    flex-wrap: wrap;
+}
+
+.boxes .box {
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 8px 8px 28px #aaaaaa,
+        -8px -8px 28px #ffffff;
+    margin-bottom: 5vw;
+}
+
+.box img {
+    width: 150px;
+    height: 100px;
+    margin-top: 1.5vw;
+    padding: 1vw 5.9vw;
+}
+
+.box h4 {
+    font-size: 2vw;
+    font-weight: 600;
+    color: #173b6c;
+    border: 1px solid #dadada;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 0vw 1vw;
+    margin: auto;
+
+}
+
+.box p {
+    font-size: 1.2vw;
+    padding: 1vw 1vw;
+    font-style: normal;
+}
+
+/* PROJECTS SECTION */
+
+.project {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    background-image: url("wave-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.project h1 {
+    text-align: center;
+    color: #173b6c;
+    font-size: 4vw;
+    font-weight: 800;
+    color: white;
+    text-decoration: underline rgb(186, 255, 255);
+}
+
+.project p {
+    font-size: 1.5vw;
+    font-weight: 500;
+    padding: 1.7vw 5vw;
+    color: white;
+}
+
+.Pboxes {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1vw;
+    flex-wrap: wrap;
+    margin-top: 5vw;
+}
+
+.Pboxes .Pbox1 {
+    width: 28vw;
+    height: 35vh;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 8px 8px 28px #aaaaaa,
+        -8px -8px 28px #ffffff;
+    margin-bottom: 3vw;
+    position: relative;
+}
+
+.Pbox1 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 8px 8px 28px #aaaaaa,
+        -8px -8px 28px #ffffff;
+    background-position: center;
+
+}
+
+.Pboxes .Pbox2 {
+    width: 28vw;
+    height: 35vh;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 8px 8px 28px #aaaaaa,
+        -8px -8px 28px #ffffff;
+    margin-bottom: 3vw;
+    position: relative;
+}
+
+.Pbox2 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 8px 8px 28px #aaaaaa,
+        -8px -8px 28px #ffffff;
+    background-position: center;
+}
+
+.Pboxes .Pbox3 {
+    width: 28vw;
+    height: 35vh;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 8px 8px 28px #aaaaaa,
+        -8px -8px 28px #ffffff;
+    margin-bottom: 3vw;
+    position: relative;
+}
+
+.Pbox3 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 8px 8px 28px #aaaaaa,
+        -8px -8px 28px #ffffff;
+    background-position: center;
+
+}
+
+.Pboxes .Pbox4 {
+    width: 28vw;
+    height: 35vh;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 8px 8px 28px #aaaaaa,
+        -8px -8px 28px #ffffff;
+    margin-bottom: 3vw;
+    position: relative;
+}
+
+.Pbox4 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 8px 8px 28px #aaaaaa,
+        -8px -8px 28px #ffffff;
+    background-position: center;
+
+}
+
+.Pboxes .Pbox5 {
+    width: 28vw;
+    height: 35vh;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 8px 8px 28px #aaaaaa,
+        -8px -8px 28px #ffffff;
+    margin-bottom: 3vw;
+    position: relative;
+}
+
+.Pbox5 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 8px 8px 28px #aaaaaa,
+        -8px -8px 28px #ffffff;
+    background-position: center;
+
+}
+
+.Pboxes .Pbox6 {
+    width: 28vw;
+    height: 35vh;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 8px 8px 28px #aaaaaa,
+        -8px -8px 28px #ffffff;
+    margin-bottom: 3vw;
+    position: relative;
+}
+
+.Pbox6 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 8px 8px 28px #aaaaaa,
+        -8px -8px 28px #ffffff;
+    background-position: center;
+
+}
+
+.hidden {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    opacity: 0;
+}
+
+.hidden1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    opacity: 0;
+}
+
+.hidden2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    opacity: 0;
+}
+
+.hidden3 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    opacity: 0;
+}
+
+.hidden4 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    opacity: 0;
+}
+
+.hidden5 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    opacity: 0;
+}
+
+.Hleft {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    background-color: #71c1e7;
+    border: 1px solid #37b3ed;
+    border-radius: 0px 0px 0px 20px;
+
+}
+
+.Hleft:hover {
+    background-color: #37b3ed;
+}
+
+.Hright {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    background-color: #71c1e7;
+    border: 1px solid #37b3ed;
+    border-radius: 0px 0px 20px 0px;
+}
+
+.Hright:hover {
+    background-color: #37b3ed;
+}
+
+.hidden i {
+    font-size: 3vw;
+    color: white;
+
+}
+
+.hidden a {
+    text-decoration: none;
+}
+
+.hidden1 i {
+    font-size: 3vw;
+    color: white;
+
+}
+
+.hidden1 a {
+    text-decoration: none;
+}
+
+.hidden2 i {
+    font-size: 3vw;
+    color: white;
+
+}
+
+.hidden2 a {
+    text-decoration: none;
+}
+
+.hidden3 i {
+    font-size: 3vw;
+    color: white;
+
+}
+
+.hidden3 a {
+    text-decoration: none;
+}
+
+.hidden4 i {
+    font-size: 3vw;
+    color: white;
+}
+
+.hidden4 a {
+    text-decoration: none;
+}
+
+.hidden5 i {
+    font-size: 3vw;
+    color: white;
+}
+
+.hidden5 a {
+    text-decoration: none;
+}
+
+/* SERVICES SECTION */
+
+.Services {
+    margin-top: 5vw;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f8fd;
+    margin-bottom: 2vw;
+}
+
+.Services h1 {
+    text-align: center;
+    color: #173b6c;
+    font-size: 4vw;
+    font-weight: 800;
+    text-decoration: underline rgb(186, 255, 255);
+}
+
+.Services p {
+    font-size: 1.5vw;
+    font-weight: 500;
+    font-style: italic;
+    padding: 3vw 5vw;
+}
+
+.SerBoxes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2vw 10vw;
+}
+
+.SerBox {
+    width: 20vw;
+    height: 100%;
+    border-radius: 20px;
+    margin-bottom: 4vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.SerBox img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.SerBox h3 {
+    padding: 0vw 1vw;
+}
+
+.SerBox p {
+    font-size: 1.2vw;
+    padding: 0vw 0vw 0vw 5vw;
+}
+
+/* CONTACT SECTION */
+
+.Contact {
+    margin-top: 5vw;
+    width: 100%;
+    height: 100vh;
+}
+
+.Contact h1 {
+    text-align: center;
+    color: #173b6c;
+    font-size: 4vw;
+    font-weight: 800;
+    text-decoration: underline rgb(186, 255, 255);
+}
+
+.Contact p {
+    font-size: 1.8vw;
+    font-weight: 500;
+    font-style: italic;
+    padding: 3vw 5vw;
+}
+
+.Csection {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Cleft {
+    width: 30%;
+    height: 70vh;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3vw;
+    box-shadow: 5px 5px 19px #dadada;
+    border-radius: 10px;
+
+}
+
+.location {
+    display: flex;
+    padding: 1vw 3vw;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 20%;
+}
+
+.email {
+    display: flex;
+    padding: 1vw 3vw;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 20%;
+}
+
+.phone {
+    display: flex;
+    padding: 1vw 3vw;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 20%;
+}
+
+.Cleft .location i {
+    font-size: 2.5vw;
+    width: 50px;
+    height: 50px;
+    background-color: #37b3ed;
+    border: 1px solid white;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Cleft .email i {
+    font-size: 2.5vw;
+    width: 50px;
+    height: 50px;
+    background-color: #37b3ed;
+    border: 1px solid white;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Cleft .phone i {
+    font-size: 2.5vw;
+    width: 50px;
+    height: 50px;
+    background-color: #37b3ed;
+    border: 1px solid white;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Cleft h4 {
+    font-size: 2vw;
+    padding: 0vw 1vw;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+
+.Cleft p {
+    font-size: 1.2vw;
+    font-style: normal;
+    letter-spacing: -0.5px;
+    font-weight: 400;
+    padding: 0vw 5vw;
+}
+
+.Cright {
+    width: 40%;
+    height: 100%;
+    padding: 2vw 5vw;
+    background-color: white;
+    margin-bottom: 2.5vw;
+    box-shadow: 5px 5px 19px #dadada;
+    border-radius: 10px;
+}
+
+.Label {
+    font-size: 1.7vw;
+    font-weight: 700;
+    padding-right: 20vw;
+    letter-spacing: -1px;
+}
+
+form #username {
+    padding: 0.5vw 0vw;
+    border: 1px solid #dadada;
+    border-radius: 10px;
+    margin-right: 5vw;
+    margin-top: 0.6vw;
+    width: 80%;
+    height: 100%;
+}
+
+form #Text {
+    padding: 0.5vw 0vw;
+    border: 1px solid #dadada;
+    border-radius: 10px;
+    margin-right: 5vw;
+    margin-top: 0.6vw;
+    width: 80%;
+    height: 100%;
+}
+
+form #Email {
+    padding: 0.5vw 0vw;
+    border: 1px solid #dadada;
+    border-radius: 10px;
+    margin-right: 5vw;
+    margin-top: 0.6vw;
+    width: 80%;
+    height: 100%;
+}
+
+form #text {
+    padding: 0.5vw 0vw;
+    border: 1px solid #dadada;
+    border-radius: 10px;
+    margin-top: 0.8vw;
+    width: 80%;
+    height: 100%;
+}
+
+.btn2 {
+    padding: 1vw 2vw;
+    background-color: #37b3ed;
+    color: white;
+    font-size: 1.5vw;
+    border: 1px solid white;
+    border-radius: 25px;
+    margin: 1vw 10vw;
+}
+
+/* FOOTER SECTION */
+
+.footer {
+    position: relative;
+    width: 100%;
+}
+
+.outer {
+    font-size: 1.5vw;
+    font-weight: 600;
+    position: absolute;
+    top: 15vw;
+    padding: 0vw 40vw 1vw 42vw;
+}
+
+.outer a {
+    text-decoration: none;
+}
+
+.innerr {
+    color: #71c1e7;
+}
+
+/* MEDIA QUERIES SECTION */
+
+@media(max-width: 700px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    nav li:first-child {
+        font-size: 4vw;
+    }
+
+    .Skill {
+        margin-top: 10vw;
+    }
+
+    .Skill h1 {
+        font-size: 7vw;
+    }
+
+    .Skill p {
+        font-size: 3.5vw;
+        padding: 4vw 6vw;
+    }
+
+    .boxes {
+        gap: 7vw;
+    }
+
+    .boxes .box {
+        width: 50vw;
+        height: 40vh;
+    }
+
+    .box img {
+        width: 150px;
+        height: 100px;
+        margin-top: 3vw;
+        padding: 1vw 12vw;
+    }
+
+    .box h4 {
+        font-size: 5vw;
+        padding: 0vw 2vw;
+    }
+
+    .box p {
+        font-size: 3vw;
+        padding: 1vw 1vw;
+        text-align: center;
+    }
+}
+
+
+@media(max-width:500px) {
+    .loader {
+        height: 100vh;
+        width: 110vw;
+    }
+
+    .glitch {
+        font-size: 10vw;
+    }
+
+    nav {
+        width: 110vw;
+        height: 13vw;
+        display: flex;
+        align-items: center;
+    }
+
+    nav li:first-child {
+        font-size: 8vw;
+        padding-left: 5vw;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar li {
+        width: 90%;
+        font-size: 15vw;
+        letter-spacing: -1px;
+        margin: 2vw 0vw;
+    }
+
+    .main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15vw;
+    }
+
+    .right {
+        width: 100%;
+        padding-left: 8vw;
+    }
+
+    .image {
+        margin-top: 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image img {
+        width: 75%;
+        border-radius: 20px;
+    }
+
+    .left {
+        width: 100%;
+        padding: 10vw 0vw 0vw 5vw;
+    }
+
+    .left .about {
+        padding: 0vw 0vw 0vw 5vw;
+    }
+
+    .about h2 {
+        font-size: 8vw;
+        letter-spacing: -2px;
+    }
+
+    .about h1 {
+        font-size: 12vw;
+        letter-spacing: -1.5px;
+    }
+
+    .about p {
+        margin-top: 1vw;
+        font-size: 6vw;
+        letter-spacing: -1.4px;
+    }
+
+    .images {
+        margin-top: 3vw;
+        padding: 0vw 10vw 0vw 5vw;
+    }
+
+    .github {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .whatsapp {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .insta {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .linkedin {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .btn {
+        padding: 0vw 10vw 0vw 5vw;
+    }
+
+    .btn button {
+        font-size: 5vw;
+        padding: 3vw 7vw;
+        margin-top: 1vw;
+    }
+
+    .AboutMe {
+        margin-top: 6vw;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .AboutMe h1 {
+        font-size: 12vw;
+        text-align: center;
+        letter-spacing: -1.5px;
+        padding-left: 7vw;
+    }
+
+    .AboutMe p {
+        padding: 2vw 0vw 2vw 4vw;
+        font-size: 6vw;
+        text-align: center;
+        letter-spacing: -1.5px;
+
+    }
+
+    .Aleft {
+        width: 100%;
+        padding: 1vw 0vw 0vw 9vw;
+    }
+
+    .Aleft img {
+        width: 90%;
+        height: 80%;
+    }
+
+    .Aright {
+        width: 100%;
+        height: 100%;
+    }
+
+    .Aright h2 {
+        font-size: 10vw;
+        padding-left: 6vw;
+    }
+
+    .Aright p {
+        padding: 2vw 0vw 2vw 3vw;
+        font-size: 7vw;
+        letter-spacing: -1.5px;
+    }
+
+    .Aright ul {
+        padding: 2vw 7vw;
+    }
+
+    .Aright li {
+        margin-top: 1.5vw;
+        font-size: 7vw;
+        line-height: 1.3;
+    }
+
+    .Aright li span {
+        font-weight: 400;
+        font-size: 6.5vw;
+    }
+
+    .Skill {
+        margin-top: 300vw;
+        width: 110vw;
+    }
+
+    .Skill h1 {
+        font-size: 12vw;
+    }
+
+    .Skill p {
+        font-size: 8vw;
+        padding: 9vw 8vw;
+    }
+
+    .boxes {
+        gap: 10vw;
+    }
+
+    .boxes .box {
+        width: 70vw;
+        height: 50vh;
+    }
+
+    .box img {
+        width: 100px;
+        height: 100px;
+        margin-top: 3vw;
+        padding: 1vw 21.5vw;
+    }
+
+    .box h4 {
+        font-size: 6vw;
+        padding: 0vw 2.5vw;
+        margin: auto;
+    }
+
+    .box p {
+        font-size: 5vw;
+        padding: 2vw 0vw;
+        text-align: center;
+        font-style: normal;
+    }
+
+    .project {
+        width: 110vw;
+        height: 100vh;
+    }
+
+    .project h1 {
+        font-size: 12vw;
+    }
+
+    .project p {
+        font-size: 4vw;
+        padding: 1.7vw 5vw;
+    }
+
+    .Pboxes {
+        flex-direction: column;
+        gap: 7vw;
+        margin-top: 25vw;
+    }
+
+    .Pboxes .Pbox1 {
+        width: 100vw;
+        height: 40vh;
+        margin-bottom: 5vw;
+    }
+
+    .Pboxes .Pbox2 {
+        width: 100vw;
+        height: 40vh;
+        margin-bottom: 5vw;
+    }
+
+    .Pboxes .Pbox3 {
+        width: 100vw;
+        height: 40vh;
+        margin-bottom: 5vw;
+    }
+
+    .Pboxes .Pbox4 {
+        width: 100vw;
+        height: 40vh;
+        margin-bottom: 5vw;
+    }
+
+    .Pboxes .Pbox5 {
+        width: 100vw;
+        height: 40vh;
+        margin-bottom: 5vw;
+    }
+
+    .Pboxes .Pbox6 {
+        width: 100vw;
+        height: 40vh;
+        margin-bottom: 5vw;
+    }
+
+    .hidden {
+        height: 15vw;
+    }
+
+    .hidden1 {
+        height: 15vw;
+    }
+
+    .hidden2 {
+        height: 15vw;
+    }
+
+    .hidden3 {
+        height: 15vw;
+    }
+
+    .hidden4 {
+        height: 15vw;
+    }
+
+    .hidden5 {
+        height: 15vw;
+    }
+
+    .hidden i {
+        font-size: 7vh;
+    }
+
+    .hidden1 i {
+        font-size: 7vh;
+    }
+
+    .hidden2 i {
+        font-size: 7vh;
+    }
+
+    .hidden3 i {
+        font-size: 7vh;
+    }
+
+    .hidden4 i {
+        font-size: 7vh;
+    }
+
+    .hidden5 i {
+        font-size: 7vh;
+    }
+
+    .Services {
+        margin-top: 410vw;
+        width: 110vw;
+        height: 100%;
+        margin-bottom: 5vw;
+    }
+
+    .Services h1 {
+        font-size: 12vw;
+    }
+
+    .Services p {
+        font-size: 6vw;
+        padding: 5vw 8vw;
+    }
+
+    .SerBoxes {
+        display: flex;
+        gap: 15vw;
+        padding: 2vw 7vw;
+    }
+
+    .SerBox {
+        width: 60vw;
+        height: 40vh;
+        margin-bottom: 0vw;
+    }
+
+    .SerBox img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .SerBox h3 {
+        padding: 0vw 1vw;
+        font-size: 5.5vw;
+        letter-spacing: -1px;
+        font-weight: 700;
+    }
+
+    .SerBox p {
+        font-size: 6vw;
+        padding: 0vw 0vw 0vw 3vw;
+    }
+
+    .Contact {
+        margin-top: 5vw;
+        width: 110vw;
+        height: 100vh;
+    }
+
+    .Contact h1 {
+        font-size: 12vw;
+    }
+
+    .Contact p {
+        font-size: 6vw;
+        padding: 5vw 7vw;
+    }
+
+    .Csection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .Cleft {
+        width: 65%;
+        height: 50vh;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 5vw;
+    }
+
+    .location {
+        display: flex;
+        padding: 3vw 5vw;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 20%;
+    }
+
+    .email {
+        display: flex;
+        padding: 3vw 5vw;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 20%;
+    }
+
+    .phone {
+        display: flex;
+        padding: 3vw 5vw;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 20%;
+    }
+
+    .Cleft .location i {
+        font-size: 8vw;
+        width: 50px;
+        height: 50px;
+    }
+
+    .Cleft .email i {
+        font-size: 8vw;
+        width: 50px;
+        height: 50px;
+    }
+
+    .Cleft .phone i {
+        font-size: 8vw;
+        width: 50px;
+        height: 50px;
+    }
+
+    .Cleft h4 {
+        font-size: 6vw;
+        padding: 2vw 2vw;
+        letter-spacing: -1px;
+    }
+
+    .Cleft p {
+        font-size: 3.5vw;
+        letter-spacing: -0.7px;
+        padding: 0vw 15vw;
+    }
+
+    .Cright {
+        width: 60%;
+        height: 100%;
+        padding: 5vw 7vw;
+        margin-bottom: 3vw;
+    }
+
+    .Label {
+        font-size: 5vw;
+        padding-right: 20vw;
+        letter-spacing: -1px;
+    }
+
+    form #username {
+        padding: 1vw 1vw;
+        margin-top: 2vw;
+    }
+
+    form #Text {
+        padding: 1vw 1vw;
+        margin-top: 2vw;
+    }
+
+    form #Email {
+        padding: 1vw 1vw;
+        margin-top: 2vw;
+    }
+
+    form #text {
+        padding: 1vw 1vw;
+        margin-top: 2vw;
+    }
+
+    .btn2 {
+        padding: 2vw 3vw;
+        font-size: 4vw;
+        margin: 2vw 15vw;
+    }
+
+    .outer {
+        font-size: 4vw;
+        font-weight: 600;
+        position: absolute;
+        top: 85vw;
+        padding: 0vw 0vw 1vw 37vw;
+    }
+
+}
