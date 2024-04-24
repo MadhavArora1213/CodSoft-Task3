@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPortfolio</title>
+
+    <!-- Css Cdn's -->
+
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+
+    <!-- My Css -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Loader -->
+
+    <span class="loader">
+        <h1>0%</h1>
+    </span>
+    <div class="loader">
+        <div data-glitch="Loading..." class="glitch">Loading...</div>
+    </div>
+
+    <!-- NavBar -->
+
+    <nav>
+        <ul class="sidebar">
+
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+                        viewBox="0 96 960 960" width="26">
+                        <path
+                            d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+                    </svg></a></li>
+            <li><a href="#home" class="active">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+
+        </ul>
+        <ul>
+
+            <li class="logo"><a href="http://127.0.0.1:5500/CalculatorProject/Task3/index.html#">Madhav</a></li>
+            <li class="hideOnMobile lists"><a href="#home" class="active">HOME</a></li>
+            <li class="hideOnMobile lists"><a href="#about">ABOUT</a></li>
+            <li class="hideOnMobile lists"><a href="#skills">SKILLS</a></li>
+            <li class="hideOnMobile lists"><a href="#projects">PROJECTS</a></li>
+            <li class="hideOnMobile lists"><a href="#services">SERVICES</a></li>
+            <li class="hideOnMobile lists"><a href="#contact">CONTACT</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="26" viewBox="0 96 960 960" width="26">
+                        <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+                    </svg></a></li>
+
+        </ul>
+    </nav>
+
+    <!-- Home -->
+
+    <div class="main section" id="home">
+
+        <div class="left">
+            <div class="about">
+                <h2>Hello, It's Me</h2>
+                <h1>Madhav Arora</h1>
+                <h2>And I'm a <span class="text"></span> </h2>
+                <p>I am a Web developer and Web designer and make responsive and user friendly websites.</p>
+            </div>
+            <div class="images">
+                <a href="https://github.com/MadhavArora1213" target="_blank"><img class="github"
+                        src="https://img.icons8.com/glyph-neue/64/github.png" alt="github" /></a>
+                <img class="whatsapp" src="https://img.icons8.com/ios-filled/50/whatsapp--v1.png" alt="whatsapp--v1" />
+                <img class="insta" src="https://img.icons8.com/ios-glyphs/30/instagram-circle.png"
+                    alt="instagram-circle" />
+                <a href="https://www.linkedin.com/in/madhav-arora-32b056254/" target="_blank"><img class="linkedin"
+                        src="https://img.icons8.com/ios-filled/50/linkedin.png" alt="linkedin" /></a>
+            </div>
+            <div class="btn">
+                <a href="resume.pdf" target="_blank"><button>Download CV</button></a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="image">
+                <img src="madhav.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- About -->
+
+    <div class="AboutMe section" id="about">
+
+        <h1>About Me</h1>
+        <p>I'm Madhav Arora, Currently pursuing B.Tech CSE from CT group of institutions and I'm passionate
+            about coding and technology. With a love for content creation, I'm dedicated to making technology more
+            accessible and user-friendly for all.</p>
+        <div class="content">
+            <div class="Aleft">
+                <img src="madhav.jpg" alt="" onmouseenter="scale()" onmouseleave="noScale()">
+            </div>
+            <div class="Aright">
+                <h2>Frontend Developer</h2>
+                <p> Passionate about creating seamless digital experiences. Combining coding expertise with design
+                    creativity to build user-centric solutions.</p>
+                <ul>
+
+                    <li>Age:<span>18</span></li>
+                    <li>Phone: <span>9877275894</span></li>
+                    <li>Degree: <span>B.TECH (COMPUTER SCIENCE)</span></li>
+                    <li>City: <span> Hoshiarpur</span></li>
+                    <li>Email: <span>madhavarora132005@gmail.com</span></li>
+                    <li>Freelance: <span>Available</span></li>
+
+                </ul>
+                <p>Hey there! I'm a coding enthusiast on a mission to crack the code of life (and some JavaScript along
+                    the way). Learning the ropes, I've dabbled in creating a bunch of projects. While I'm not a coding
+                    guru but I'm fueled by curiosity and a dream to leave a digital mark. Ready to team up on some cool
+                    projects? Let's make tech magic happen!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Skills -->
+
+    <div class="Skill section" id="skills">
+
+        <h1>MySkills</h1>
+        <p class="para">Take a peek at my skills - it's a work in progress —</p>
+        <div class="boxes">
+            <div class="box">
+                <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/html-2752158-2284975.png?f=webp"
+                    alt="html-5" />
+                <h4>HTML5</h4>
+                <p>HyperText Markup Language or HTML is the standard markup language for documents designed to be
+                    displayed in a web browser. It defines the content and structure of web content. </p>
+            </div>
+            <div class="box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png"
+                    alt="css3" />
+                <h4>CSS3</h4>
+                <p>Cascading Style Sheets (CSS) is a style sheet language used for specifying the presentation and
+                    styling of a document written in a markup language such as HTML or XML.</p>
+            </div>
+            <div class="box">
+                <img src="https://i0.wp.com/theicom.org/wp-content/uploads/2016/03/js-logo.png?fit=500%2C500&ssl=1&w=640"
+                    alt="javascript" />
+                <h4>JavaScript</h4>
+                <p>JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with
+                    first-class functions.</p>
+            </div>
+            <div class="box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="c-programming" />
+                <h4>C</h4>
+                <p>C is a general-purpose programming language created by Dennis Ritchie at the Bell Laboratories in
+                    1972.The main reason for its popularity is because it is a fundamental language in the field of
+                    computer science.</p>
+            </div>
+            <div class="box">
+                <img src="https://w7.pngwing.com/pngs/46/626/png-transparent-c-logo-the-c-programming-language-computer-icons-computer-programming-source-code-programming-miscellaneous-template-blue.png"
+                    alt="c-plus-plus-logo" />
+                <h4>C++</h4>
+                <p>C++ is an object-oriented programming language which gives a clear structure to programs and allows
+                    code to be reused, lowering development costs.</p>
+            </div>
+            <div class="box">
+                <img src="https://1000logos.net/wp-content/uploads/2020/09/Java-Emblem.jpg"
+                    alt="java-coffee-cup-logo--v1" />
+                <h4>Basic Java</h4>
+                <p>Java is a popular programming language.Java is used to develop mobile apps, web apps, desktop apps,
+                    games and much more.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Projects -->
+
+    <div class="project section" id="projects">
+        <h1>Projects</h1>
+        <p>Dive into my digital wonderland! Click, explore, and watch my projects come to life. It's like a theme park,
+            but for coding enthusiasts! —</p>
+        <div class="Pboxes">
+            <div class="Pbox1" onmouseleave="mouseOut()">
+                <img class="img1" src="project1.png" alt="" onmouseenter="mouseOver()">
+                <div class="hidden">
+                    <div class="Hleft">
+                        <a href="project1.png" target="_blank"><i class="ri-add-fill"></i></a>
+                    </div>
+                    <div class="Hright">
+                        <a href="https://madhavarora1213.github.io/Animated-Landing-Page/" target="_blank"><i
+                                class="ri-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="Pbox2" onmouseleave="mouseOut1()">
+                <img class="img2" src="project2.png" alt="" onmouseover="mouseOver1()">
+                <div class="hidden1">
+                    <div class="Hleft">
+                        <a href="project2.png" target="_blank"><i class="ri-add-fill"></i></a>
+                    </div>
+                    <div class="Hright">
+                        <a href=" https://madhavarora1213.github.io/CodSoft-Task2/" target="_blank"><i
+                                class="ri-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="Pbox3" onmouseleave="mouseOut2()">
+                <img class="img3" src="project3.png" alt="" onmouseover="mouseOver2()">
+                <div class="hidden2">
+                    <div class="Hleft">
+                        <a href="project3.png" target="_blank"><i class="ri-add-fill"></i></a>
+                    </div>
+                    <div class="Hright">
+                        <a href=" https://madhavarora1213.github.io/CodSoft-Task1/" target="_blank"><i
+                                class="ri-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="Pbox4" onmouseleave="mouseOut3()">
+                <img class="img4" src="project4.png" alt="" onmouseover="mouseOver3()">
+                <div class="hidden3">
+                    <div class="Hleft">
+                        <a href="project4.png" target="_blank"><i class="ri-add-fill"></i></a>
+                    </div>
+                    <div class="Hright">
+                        <a href="https://madhavarora1213.github.io/Tic-Tac-Toe-Game/" target="_blank"><i
+                                class="ri-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="Pbox5" onmouseleave="mouseOut4()">
+                <img class="img5" src="project5.png" alt="" onmouseover="mouseOver4()">
+                <div class="hidden4">
+                    <div class="Hleft">
+                        <a href="project5.png" target="_blank"><i class="ri-add-fill"></i></a>
+                    </div>
+                    <div class="Hright">
+                        <a href="https://madhavarora1213.github.io/UltraEdit-Clone/" target="_blank"><i
+                                class="ri-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="Pbox6" onmouseleave="mouseOut5()">
+                <img class="img6" src="project6.png" alt="" onmouseover="mouseOver5()">
+                <div class="hidden5">
+                    <div class="Hleft">
+                        <a href="project6.png" target="_blank"><i class="ri-add-fill"></i></a>
+                    </div>
+                    <div class="Hright">
+                        <a href="https://madhavarora1213.github.io/Ai-Tools-Website/" target="_blank"><i
+                                class="ri-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Services -->
+    <div class="Services section" id="services">
+
+        <h1>Services</h1>
+        <p id="para">Here are some of the services I offer to clients. Think of it like a tech buffet, but without the
+            awkward
+            small talk with the salad bar! —</p>
+        <div class="SerBoxes">
+            <div class="SerBox">
+                <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-briefcases-copywriting-flaticons-lineal-color-flat-icons.png"
+                    alt="external-briefcases-copywriting-flaticons-lineal-color-flat-icons" />
+                <h3>Web Development</h3>
+                <p>I provide web development services, creating websites so good, even your grandma would bookmark them!
+                </p>
+            </div>
+            <div class="SerBox">
+                <img src="https://img.icons8.com/nolan/64/consultation.png" alt="consultation" />
+                <h3>Consultation</h3>
+                <p>My consultations are so insightful; I can predict the future of your project – or at least the next
+                    tech trend!</p>
+            </div>
+            <div class="SerBox">
+                <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/external-solutions-team-building-flaticons-flat-flat-icons.png"
+                    alt="external-solutions-team-building-flaticons-flat-flat-icons" />
+                <h3>Custom Solutions</h3>
+                <p>I offer custom solutions, like a tailor for your project – because one-size-fits-all is so last
+                    season!</p>
+            </div>
+            <div class="SerBox">
+                <img src="https://img.icons8.com/external-others-iconmarket/64/external-calander-healthcare-and-medical-others-iconmarket.png"
+                    alt="external-calander-healthcare-and-medical-others-iconmarket" />
+                <h3>Maintenance</h3>
+                <p>I provide maintenance services, ensuring your website runs smoother than a cat video on the internet!
+                </p>
+            </div>
+            <div class="SerBox">
+                <img src="https://img.icons8.com/external-outline-juicy-fish/60/external-freelancing-side-hustles-outline-outline-juicy-fish.png"
+                    alt="external-freelancing-side-hustles-outline-outline-juicy-fish" />
+                <h3>Freelancing</h3>
+                <p>Craft a compelling narrative about your journey as a freelancer, highlighting your unique skills,
+                    experiences, and passion for your craft.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Contact -->
+
+    <div class="Contact section" id="contact">
+
+        <h1>Contact</h1>
+        <p class="para1">If you have any questions, queries, or want to work with me? Shoot me a message! Quick replies
+            are my
+            specialty —</p>
+        <div class="Csection">
+            <div class="Cleft">
+                <div class="location" onmouseenter="change()" onmouseleave="noChange()">
+                    <i class="ri-map-pin-line"></i>
+                    <h4>Location:</h4>
+                    <p>Khudda,Hoshiarpur, Punjab, 144305</p>
+                </div>
+                <div class="email" onmouseenter="change1()" onmouseleave="noChange1()">
+                    <i class="ri-mail-line"></i>
+                    <h4>Email:</h4>
+                    <p>madhavarora132005@gmail.com</p>
+                </div>
+                <div class="phone" onmouseenter="change2()" onmouseleave="noChange2()">
+                    <i class="ri-smartphone-line"></i>
+                    <h4>Call:</h4>
+                    <p>+91 9877275894</p>
+                </div>
+            </div>
+            <div class="Cright">
+                <form action="">
+                    <label for="username" class="Label">Your Name:</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="Text" class="Label">Your PhoneNumber:</label>
+                    <input type="text" id="Text" name="text" required>
+
+                    <label for="Email" class="Label">Your Email:</label>
+                    <input type="email" id="Email" name="email" required>
+
+                    <label for="text" class="Label">Message:</label>
+                    <textarea id="text" name="text" rows="10" cols="80" required></textarea>
+                    <button class="btn2">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer">
+        <span class="outer">&#169 copyright <a href="http://127.0.0.1:5500/CalculatorProject/Task3/index.html#"><span
+                    class="innerr">Madhav</span></a></span>
+    </div>
+
+    <!-- Scripts Cdn's -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.js"></script>
+
+    <!-- My Scripts -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
